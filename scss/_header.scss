@@ -1,0 +1,35 @@
+.cm-product-logo {
+  display: flex;
+  padding: 2em 0;
+  img {
+    max-width: 50%;
+  }
+}
+
+.cm-top-banner {
+  display: flex;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: contain;
+  .cm-card {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    img {
+      max-width: 100%;
+      border-radius: 16px;
+    }
+    .cm-row {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      .cm-col {
+        display: flex;
+        flex-basis: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// Basic setup
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+$title_font: "Montserrat", sans-serif;
+$text_font: "Open Sans", sans-serif;
+
+$primary_color: rgb(21, 21, 21);
+
+$max_content_width: 1440px;
+
+.cm-custommerce-product {
+  font-family: $text_font;
+  color: $primary_color;
+  line-height: 1.2;
+  margin: 0 auto;
+  max-width: $max_content_width;
+
+  @import "header";
+}
