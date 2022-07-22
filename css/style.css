@@ -485,9 +485,28 @@ h1, h2, h3 {
     width: 100%;
     overflow: hidden;
   }
+  
+  .cm-custommerce-product .cm-top-banner .cm-card {
+    box-sizing: border-box;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card img {
+    position: relative;
+    left: 40px;
+  }
 
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child {
     flex-basis: 70%;
+    font-size: 2.5vw;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child p {
+    font-size: 5vw;
+    bottom: 4vw;
+    left: 6vw;
+    margin-top: 10px;
+    line-height: 6vw;
+    height: auto;
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card img {
@@ -511,8 +530,14 @@ h1, h2, h3 {
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col h1 {
+    height: auto;
     font-size: 3em;
-    margin-bottom: 15%;
+    bottom: 4vw;
+    left: 6vw;
+    line-height: 8vw;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
   }
   .cm-custommerce-product .cm-company p {
     width: 100%;
@@ -522,15 +547,141 @@ h1, h2, h3 {
     flex-flow: column nowrap;
     align-items: center;
     height: auto;
+    top: 0;
   }
   
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile {
-    width: 70%;
-    height: 38em;
+    width: 65%;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 16px 16px 0 16px;
+    border-radius: 16px;
+    animation: tile-out;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover {
+    width: 65%;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 16px 16px 0 16px;
+    animation: tile-in;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes tile-out {
+    from {background-color: rgba(3, 115, 255, .1);
+      transform: scale(1.05);}
+    to {background-color: rgba(255, 255, 255, 0);
+      transform: scale(1);}
+  }
+
+  @keyframes tile-in {
+    from {background-color: rgba(255, 255, 255, 0);
+      transform: scale(1);}
+    to {background-color: rgba(3, 115, 255, .1);
+      transform: scale(1.05);}
   }
 
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-desc  p {
-    font-size: 1.22em;
+    font-size: 100%;
+  }
+
+  .cm-custommerce-product .cm-product-desc {
+    margin-top: 2em;
+    top: 0;
+  }
+
+  .cm-custommerce-product .cm-product-desc h2 {
+    font-size: 120%;
+  }
+
+  .cm-custommerce-product .cm-product-desc .cm-row {
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .cm-custommerce-product .cm-product-desc .cm-row .cm-col {
+    align-items: center;
+    width: 70%;
+  }
+
+  .cm-custommerce-product .cm-product-desc .cm-row .cm-col:first-child {
+    width: 40%;
+  }
+
+  .cm-custommerce-product .cm-product-desc .cm-row .cm-col:nth-child(2) {
+    font-size: 100%;
+    bottom: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cm-custommerce-product .cm-product-desc .cm-row .cm-col h3 {
+    font-size: 120%;
+    margin-bottom: 0;
+  }
+
+  .cm-custommerce-product .cm-company p {
+    width: 90%;
+  }
+
+  .cm-custommerce-product .cm-highlights h3 {
+    max-width: 85%;
+    height: auto;
+    margin-bottom: 30px;
+    font-size: 120%;
+    line-height: normal;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-desc {
+    visibility: visible;
+    animation: 0;
+    /* dodac animacje wejscia i wyjscia */
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-desc {
+    /* animacja wejscia */
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-box {
+    animation: 0;
+    visibility: hidden;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-box {
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-company {
+    top: 30px;
+  }
+
+  .cm-custommerce-product .cm-company h3 {
+    font-size: 120%;
+  }
+  
+  .cm-custommerce-product .cm-company p {
+    font-size: 100%;
+  }
+
+  .cm-custommerce-product .cm-bottom-logo {
+    top: 20px;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-graphic-text {
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-graphic-text {
+    animation: 0;
   }
 
   /* usunac animacje shadow boxa, sprawdzi jak to sie zgrywa na widnowskie bo na macu mnie glowa boli, zwrocic duza uwage na responsywnosc wszystkiego ponizej 800px
