@@ -34,7 +34,6 @@ h1, h2, h3 {
 .cm-custommerce-product .cm-product-logo img {
   max-width: 50%;
   position: relative;
-  /* left: 120px; */
 }
 
 .cm-custommerce-product .cm-top-banner {
@@ -48,9 +47,7 @@ h1, h2, h3 {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  /* left: 120px; */
-  
+          justify-content: space-between;  
 }
 
 .cm-custommerce-product .cm-top-banner .cm-card img {
@@ -403,7 +400,7 @@ h1, h2, h3 {
   transform: scale(0.5);
 }
 
-@media screen and (max-width: 1250px) {
+@media only screen and (max-width: 1250px) {
   
   .cm-custommerce-product {
     width: 100%;
@@ -428,6 +425,7 @@ h1, h2, h3 {
 
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles {
     width: 92%;
+    height: 22em;
     justify-content: space-around;
   }
 
@@ -478,6 +476,64 @@ h1, h2, h3 {
   }
 }
 
-@media screen and (max-width: 800px) {
-  /* mobilka tutaj, a wyzej zmienic rozmiary czcionek i highlights-tiles zeby nie byly takie male */
+@media only screen and (max-width: 800px) {
+  .cm-custommerce-product {
+    width: 90%;
+  }
+
+  .cm-custommerce-product .cm-top-banner {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child {
+    flex-basis: 70%;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card img {
+    width: 200%;
+    height: 200%;
+    display: block;
+    padding-right: 13em;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:nth-child(2) {
+    visibility: hidden;
+    flex-basis: 0;
+  }
+  
+  .cm-custommerce-product .cm-highlights {  
+    top: 50px;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card {
+    justify-content: center;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col h1 {
+    font-size: 3em;
+    margin-bottom: 15%;
+  }
+  .cm-custommerce-product .cm-company p {
+    width: 100%;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles {
+    flex-flow: column nowrap;
+    align-items: center;
+    height: auto;
+  }
+  
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile {
+    width: 70%;
+    height: 38em;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-desc  p {
+    font-size: 1.22em;
+  }
+
+  /* usunac animacje shadow boxa, sprawdzi jak to sie zgrywa na widnowskie bo na macu mnie glowa boli, zwrocic duza uwage na responsywnosc wszystkiego ponizej 800px
+  animacje zamienic na stworzenie borderka wokol danego tekstu i ruszenie go lekko w gore moze jakis bounce zobaczymy, generalnie duzo roboty z highlights i top banner tez obczaic skalowanie bo na mac sie co jebalo */
+  /* przy malywch width zmienic szerokosci h1 i p w top banner oraz h3 w cm-higlights linia 34 */
 }
