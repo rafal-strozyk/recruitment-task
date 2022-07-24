@@ -119,6 +119,7 @@ h1, h2, h3 {
 }
 
 .cm-custommerce-product .cm-highlights {
+  margin: 0 auto;
   width: 1107px;
   position: relative;
   align-self: center;
