@@ -321,16 +321,17 @@ h1, h2, h3 {
   flex-flow: row nowrap;
   justify-content: space-around;
 }
+
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col {
   width: 40%;
-  text-align: center;
+  text-align: left;
 }
 
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col:nth-child(2) {
   flex-flow: column nowrap;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col .cm-line {
@@ -506,6 +507,7 @@ h1, h2, h3 {
   
   .cm-custommerce-product .cm-top-banner .cm-card {
     box-sizing: border-box;
+    justify-content: center;
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card img {
@@ -524,12 +526,24 @@ h1, h2, h3 {
     border-bottom: 2px solid #0E0E0E;
   }
 
+
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child {
     flex-basis: 20%;
     position: relative;
     top: 140px;
     height: 210px;
     width: 90%;
+  }
+
+  
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child h1 {
+    height: auto;
+    font-size: 32px;
+    bottom: 0;
+    left: 0;
+    line-height: 35px;
+    margin: 0;
+    text-align: center;
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child p {
@@ -555,23 +569,13 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-highlights {  
     top: 20px;
   }
-
-  .cm-custommerce-product .cm-top-banner .cm-card {
-    justify-content: center;
-  }
-
-  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col h1 {
+  
+  .cm-custommerce-product .cm-highlights h3 {
+    max-width: 85%;
     height: auto;
-    font-size: 32px;
-    bottom: 0;
-    left: 0;
-    line-height: 35px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .cm-custommerce-product .cm-company p {
-    width: 100%;
+    margin-bottom: 20px;
+    font-size: 120%;
+    line-height: normal;
   }
 
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles {
@@ -618,8 +622,34 @@ h1, h2, h3 {
       transform: scale(1.05);}
   }
 
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-desc  p {
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-graphic-text {
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-graphic-text {
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-desc {
+    visibility: visible;
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-desc {
+    animation: 0;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-desc  p {
     font-size: 100%;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-box {
+    animation: 0;
+    visibility: hidden;
+  }
+
+  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-box {
+    animation: 0;
   }
 
   .cm-custommerce-product .cm-product-desc {
@@ -639,47 +669,26 @@ h1, h2, h3 {
 
   .cm-custommerce-product .cm-product-desc .cm-row .cm-col {
     width: 90%;
+    text-align: center;
   }
 
   .cm-custommerce-product .cm-product-desc .cm-row .cm-col:first-child {
     width: 60%;
   }
+  
+  .cm-custommerce-product .cm-product-desc .cm-row .cm-col:nth-child(2) {
+    flex-flow: column nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.8em;
+  }
 
-  .cm-custommerce-product .cm-product-desc .cm-row .cm-col h3 {
+  .cm-custommerce-product .cm-product-desc .cm-row .cm-col:nth-child(2) h3 {
     font-size: 120%;
     margin-bottom: 0;
   }
-
-  .cm-custommerce-product .cm-company p {
-    width: 90%;
-  }
-
-  .cm-custommerce-product .cm-highlights h3 {
-    max-width: 85%;
-    height: auto;
-    margin-bottom: 20px;
-    font-size: 120%;
-    line-height: normal;
-  }
-
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-desc {
-    visibility: visible;
-    animation: 0;
-  }
-
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-desc {
-    animation: 0;
-  }
-
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-box {
-    animation: 0;
-    visibility: hidden;
-  }
-
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-box {
-    animation: 0;
-  }
-
+  
   .cm-custommerce-product .cm-company {
     top: 0;
   }
@@ -687,25 +696,16 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-company h3 {
     font-size: 120%;
   }
-  
+
   .cm-custommerce-product .cm-company p {
+    width: 90%;
     font-size: 100%;
   }
 
   .cm-custommerce-product .cm-bottom-logo {
     top: 0;
   }
-
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-graphic-text {
-    animation: 0;
-  }
-
-  .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-graphic-text {
-    animation: 0;
-  }
-  /*
-  animacje zamienic na stworzenie borderka wokol danego tekstu i ruszenie go lekko w gore moze jakis bounce zobaczymy, generalnie duzo roboty z highlights i top banner tez obczaic skalowanie bo na mac sie co jebalo */
-  /* przy malywch width zmienic szerokosci h1 i p w top banner oraz h3 w cm-higlights linia 34 */
+  
 }
 
 @media only screen and (max-width: 400px) {
@@ -714,7 +714,7 @@ h1, h2, h3 {
     font-size: 5.2vw;
   }
 
-  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col h1 {
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child h1 {
     font-size: 8vw;
   }
 }
