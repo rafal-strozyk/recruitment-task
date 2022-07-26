@@ -504,6 +504,10 @@ h1, h2, h3 {
     transform: scale(0.8);
   }
 
+  .cm-custommerce-product .cm-product-logo img {
+      height: auto;
+  }
+
   .cm-custommerce-product .cm-top-banner {
     width: 100%;
     overflow: hidden;
