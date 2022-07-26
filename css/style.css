@@ -349,6 +349,7 @@ h1, h2, h3 {
 
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col h3 {
   font-size: 26px;
+  margin: 16px 0;
 }
 
 .cm-custommerce-product .cm-company {
@@ -376,6 +377,7 @@ h1, h2, h3 {
 
 .cm-custommerce-product .cm-company h3 {
   font-size: 32px;
+  margin: 16px 0 10px 0;
 }
 
 .cm-custommerce-product .cm-company p {
@@ -705,7 +707,6 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-bottom-logo {
     top: 0;
   }
-  
 }
 
 @media only screen and (max-width: 400px) {
