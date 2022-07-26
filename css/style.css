@@ -26,7 +26,6 @@ h1, h2, h3 {
   display: -ms-flexbox;
   display: flex;
   padding: 2em 0;
-  width: 100%;
 }
 
 .cm-custommerce-product .cm-product-logo img {
@@ -187,6 +186,7 @@ h1, h2, h3 {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
+  display: flex;
 }
 
 .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic-text {
@@ -223,6 +223,10 @@ h1, h2, h3 {
   animation-duration: 0.3s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+}
+
+.cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic img {
+  border-radius: 16px;
 }
 
 @keyframes box-in {
@@ -320,16 +324,14 @@ h1, h2, h3 {
 }
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col {
   width: 40%;
-  text-align: left;
+  text-align: center;
 }
 
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col:nth-child(2) {
   flex-flow: column nowrap;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  bottom: 40px;
+  align-items: center;
 }
 
 .cm-custommerce-product .cm-product-desc .cm-row .cm-col .cm-line {
@@ -478,52 +480,72 @@ h1, h2, h3 {
 @media only screen and (max-width: 800px) {
 
   .cm-custommerce-product .cm-product-logo {
-    padding: 15px 0;
+    padding: 10px 0;
+    justify-content: center;
+    transform: scale(0.8);
   }
 
   .cm-custommerce-product .cm-top-banner {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #0E0E0E;
+    padding-bottom: 150px;
+    border-radius: 16px;
   }
   
   .cm-custommerce-product .cm-top-banner .cm-card {
     box-sizing: border-box;
-    overflow: hidden;
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card img {
     position: relative;
-    left: 40px;
-  }
-
-  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child {
-    flex-basis: 70%;
-    font-size: 2.5vw;
-  }
-
-  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child p {
-    font-size: 5vw;
-    bottom: 4vw;
-    left: 6vw;
-    margin-top: 10px;
-    line-height: 6vw;
-    height: auto;
-  }
-
-  .cm-custommerce-product .cm-top-banner .cm-card img {
+    right: 15vw;
     width: 200%;
     height: 200%;
     display: block;
-    padding-right: 13em;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row {
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 0;
+    border-bottom: 2px solid #0E0E0E;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child {
+    flex-basis: 20%;
+    position: relative;
+    top: 140px;
+    height: 210px;
+    width: 90%;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child p {
+    font-size: 1.3em;
+    bottom: 0;
+    left: 0;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
+    height: auto;
+    text-align: center;
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:nth-child(2) {
-    visibility: hidden;
-    flex-basis: 0;
+    flex-basis: 60%;
+    top: 120px;
+    bottom: 0;
+    text-align: center;
+    align-items: center;
+    background-position: center;
   }
+
   
   .cm-custommerce-product .cm-highlights {  
-    top: 50px;
+    top: 20px;
   }
 
   .cm-custommerce-product .cm-top-banner .cm-card {
@@ -532,14 +554,14 @@ h1, h2, h3 {
 
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col h1 {
     height: auto;
-    font-size: 3em;
-    bottom: 4vw;
-    left: 6vw;
-    line-height: 8vw;
+    font-size: 32px;
+    bottom: 0;
+    left: 0;
+    line-height: 35px;
     margin: 0;
-    display: flex;
-    align-items: flex-end;
+    text-align: center;
   }
+
   .cm-custommerce-product .cm-company p {
     width: 100%;
   }
@@ -593,7 +615,6 @@ h1, h2, h3 {
   }
 
   .cm-custommerce-product .cm-product-desc {
-    margin-top: 2em;
     top: 0;
   }
 
@@ -609,19 +630,11 @@ h1, h2, h3 {
   }
 
   .cm-custommerce-product .cm-product-desc .cm-row .cm-col {
-    align-items: center;
-    width: 85%;
+    width: 90%;
   }
 
   .cm-custommerce-product .cm-product-desc .cm-row .cm-col:first-child {
     width: 60%;
-  }
-
-  .cm-custommerce-product .cm-product-desc .cm-row .cm-col:nth-child(2) {
-    font-size: 100%;
-    bottom: 0;
-    text-align: center;
-    align-items: center;
   }
 
   .cm-custommerce-product .cm-product-desc .cm-row .cm-col h3 {
@@ -636,7 +649,7 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-highlights h3 {
     max-width: 85%;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 120%;
     line-height: normal;
   }
@@ -644,11 +657,9 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-desc {
     visibility: visible;
     animation: 0;
-    /* dodac animacje wejscia i wyjscia */
   }
 
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-desc {
-    /* animacja wejscia */
     animation: 0;
   }
 
@@ -662,7 +673,7 @@ h1, h2, h3 {
   }
 
   .cm-custommerce-product .cm-company {
-    top: 30px;
+    top: 0;
   }
 
   .cm-custommerce-product .cm-company h3 {
@@ -684,8 +695,18 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile:hover .cm-highlights-graphic .cm-highlights-graphic-text {
     animation: 0;
   }
-
-  /* usunac animacje shadow boxa, sprawdzi jak to sie zgrywa na widnowskie bo na macu mnie glowa boli, zwrocic duza uwage na responsywnosc wszystkiego ponizej 800px
+  /*
   animacje zamienic na stworzenie borderka wokol danego tekstu i ruszenie go lekko w gore moze jakis bounce zobaczymy, generalnie duzo roboty z highlights i top banner tez obczaic skalowanie bo na mac sie co jebalo */
   /* przy malywch width zmienic szerokosci h1 i p w top banner oraz h3 w cm-higlights linia 34 */
+}
+
+@media only screen and (max-width: 400px) {
+  
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:first-child p {
+    font-size: 5.2vw;
+  }
+
+  .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col h1 {
+    font-size: 8vw;
+  }
 }
