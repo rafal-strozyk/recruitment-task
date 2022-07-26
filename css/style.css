@@ -301,7 +301,7 @@ h1, h2, h3 {
 
 .cm-custommerce-product .cm-product-desc {
   position: relative;
-  top: 260px;
+  top: 220px;
   width: 1250px;
   display: flex;
   flex-flow: column wrap;
@@ -316,7 +316,6 @@ h1, h2, h3 {
 }
 
 .cm-custommerce-product .cm-product-desc .cm-row {
-  margin-top: 40px;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
@@ -354,7 +353,7 @@ h1, h2, h3 {
 .cm-custommerce-product .cm-company {
   color: #484848;
   position: relative;
-  top: 360px;
+  top: 250px;
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
@@ -383,17 +382,16 @@ h1, h2, h3 {
   width: 640px;
   text-align: center;
   font-size: 20px;
-  margin-bottom: 60px;
 }
 
 .cm-custommerce-product .cm-bottom-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   position: relative;
-  top: 360px;
+  top: 250px;
   display: flex;
   justify-content: center;
-  padding: 2em 0;
+  padding: 0.8em 0;
 }
 
 .cm-custommerce-product .cm-bottom-logo img {
@@ -439,6 +437,7 @@ h1, h2, h3 {
   }
 
   .cm-custommerce-product .cm-product-desc {
+    top: 250px;
     width: 100%;
   }
 
@@ -474,6 +473,15 @@ h1, h2, h3 {
   .cm-custommerce-product .cm-top-banner .cm-card .cm-row .cm-col:nth-child(2) {
     height: auto;
     background-size: auto 100%;
+  }
+  
+  .cm-custommerce-product .cm-product-desc {
+    top: 200px;
+    width: 100%;
+  }
+
+  .cm-custommerce-product .cm-company {
+    top: 250px;
   }
 }
 
@@ -685,7 +693,7 @@ h1, h2, h3 {
   }
 
   .cm-custommerce-product .cm-bottom-logo {
-    top: 20px;
+    top: 0;
   }
 
   .cm-custommerce-product .cm-highlights .cm-highlights-tiles .cm-highlights-tile .cm-highlights-graphic .cm-highlights-graphic-text {
