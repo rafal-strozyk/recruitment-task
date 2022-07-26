@@ -408,6 +408,14 @@ h1, h2, h3 {
     width: 100%;
   }
 
+  .cm-custommerce-product .cm-product-logo {
+    padding: 2.5vw 0;
+  }
+
+  .cm-custommerce-product .cm-product-logo img {
+    height: 3.1vw;
+  }
+
   .cm-custommerce-product .cm-top-banner .cm-card img {
     width: 100%;
     border-radius: 16px;   
